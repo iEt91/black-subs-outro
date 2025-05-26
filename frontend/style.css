@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.starfield {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif') repeat;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.intro {
+  perspective: 400px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  height: 30vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  z-index: 1;
+}
+
+.crawl {
+  position: absolute;
+  bottom: -100%;
+  width: 80%;
+  left: 10%;
+  color: yellow;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  transform-origin: bottom center;
+  transform: rotateX(25deg);
+  animation: crawl 90s linear forwards;
+}
+
+@keyframes crawl {
+  0% { bottom: -100%; }
+  100% { bottom: 100%; }
+}
